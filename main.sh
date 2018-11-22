@@ -75,7 +75,7 @@ chown -R "$user:$user" "$HOME/go"
 
 cd Master
 
-chown "$user:$user" "~/nknupdate"
+chown "$user:$user" "~"
 read
 
 # Useful aliases and cleaning
