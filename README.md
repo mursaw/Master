@@ -14,8 +14,4 @@ apt-get install make curl git -y
 
 adduser nknuser && usermod -aG sudo nknuser
 
-cd $HOME/nknuser
-
-git clone https://github.com/mursaw/Master.git
-
 Reboot and log in as nknuser
