@@ -12,7 +12,7 @@ gourl=`curl https://golang.org/dl/ | grep linux-amd64 | sort --version-sort | ta
 HOME="/home/$user"
 
 [[ ($# -ne 1) || ! $SUDO_USER ]] && echo 'Usage: sudo ./setup passwd' && exit 1
-echo $1
+
 read
 
 wget ${gourl}
@@ -25,7 +25,6 @@ tar -C /usr/local -xvf `echo ${gourl} | cut -d '/' -f5`
 	echo "- Environment Path set &  reloaded, Press enter to continue"
 
 go version
-read
 
 mkdir -p ~/go/src/github.com/nknorg && cd ~/go/src/github.com/nknorg
 
@@ -67,9 +66,15 @@ mv nknupdate "~"
 echo "- NKN update script installed"
 read
 
+cd ..
+
+
 # Make sure no files are owned by root
-chown -R "$user:$user" "~/go/src/github.com/nknorg/nkn"
-chown -R "$user:$user" "~/go"
+chown -R "$user:$user" "$HOME/go/src/github.com/nknorg/nkn"
+chown -R "$user:$user" "$HOME/go"
+
+cd Master
+
 chown "$user:$user" "~/nknupdate"
 read
 
