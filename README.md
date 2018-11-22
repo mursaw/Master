@@ -21,3 +21,7 @@ git clone https://github.com/mursaw/Master.git
 cd Master
 
 chmod +x ./main.sh
+
+then run the following with PASSWORD as your chosen password
+
+Sudo ./main.sh PASSWORD
