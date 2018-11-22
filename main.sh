@@ -41,11 +41,9 @@ make
 
 cp config.testnet.json config.json
 
-./nknc wallet -c -p $1
-
-#./nknd -p $1
-
-
+# Wallet
+addr=$(./nknc wallet -c -p "$passwd" | awk 'NR==3{print $1}')
+echo "- WALLET created"
 
 
 echo "Setting Plug&Play NKM..."
@@ -81,10 +79,12 @@ read
 # Useful aliases and cleaning
 #cd
 #rm -rf "$dir"
+cd $HOME
+echo "alias wl='cd $HOME/go/src/github.com/nknorg/nkn; ./nknc wallet -l balance -p \"$passwd\"; cd - &>/dev/null'" >> ~/.bashrc
+echo "alias ad='cd $HOME/go/src/github.com/nknorg/nkn; ./nknc wallet -l account -p \"$passwd\"; cd - &>/dev/null'" >> ~/.bashrc
+echo "alias lg='sudo journalctl --follow -o cat -u nkn.service'" >> ~/.bashrc
+source .bashrc
 
-echo "alias wl='cd $HOME/go/src/github.com/nknorg/nkn; ./nknc wallet -l balance -p \"$passwd\"; cd - &>/dev/null'" >> .bashrc
-echo "alias ad='cd $HOME/go/src/github.com/nknorg/nkn; ./nknc wallet -l account -p \"$passwd\"; cd - &>/dev/null'" >> .bashrc
-echo "alias lg='sudo journalctl --follow -o cat -u nkn.service'" >> .bashrc
 
 # Bingo
 systemctl enable nkn.service &>/dev/null
