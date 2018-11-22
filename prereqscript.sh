@@ -15,6 +15,4 @@ adduser nknuser && usermod -aG sudo nknuser
 cd /nknuser
 read
 
-git clone https://github.com/mursaw/Master.git
-
 reboot
