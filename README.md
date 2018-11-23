@@ -10,7 +10,7 @@ echo "deb-src  http://deb.debian.org/debian  stretch main" >>  /etc/apt/sources.
 
 apt-get remove unscd -y
 
-*******?if running Ubuntu start from here*****
+              *****?If running Ubuntu start from here*****
 
 apt-get update -y
 
