@@ -26,6 +26,6 @@ cd Master
 
 chmod +x ./main.sh
 
-then run the following with PASSWORD as your chosen password
+then run the following with PASSWORD as your chosen WALLET password.
 
 sudo ./main.sh PASSWORD
