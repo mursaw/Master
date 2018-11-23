@@ -4,7 +4,7 @@ Description=nkn
 [Service]
 User=EDITNAME
 WorkingDirectory=/home/EDITNAME/go/src/github.com/nknorg/nkn
-ExecStart=/home/EDITNAME/go/src/github.com/nknorg/nkn/nknd --nat -p EDITPASS
+ExecStart=/home/EDITNAME/go/src/github.com/nknorg/nkn/nknd -p EDITPASS
 LimitNOFILE=500000
 Restart=always
 RestartSec=3
