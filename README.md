@@ -28,4 +28,4 @@ chmod +x ./main.sh
 
 then run the following with PASSWORD as your chosen password
 
-Sudo ./main.sh PASSWORD
+sudo ./main.sh PASSWORD
