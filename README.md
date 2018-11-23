@@ -1,12 +1,13 @@
 # Master
 
 #run this manually first as root
-
+*****?If running debian start from here*****
 echo "deb  http://deb.debian.org/debian  stretch main" >>  /etc/apt/sources.list
 
 echo "deb-src  http://deb.debian.org/debian  stretch main" >>  /etc/apt/sources.list
 
 apt-get remove unscd -y
+*******?if running Ubunto run from here*****
 
 apt-get update -y
 
