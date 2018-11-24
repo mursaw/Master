@@ -11,7 +11,7 @@ gourl=`curl https://golang.org/dl/ | grep linux-amd64 | sort --version-sort | ta
 # Minimal environment needed
 HOME="/home/$user"
 
-[[ ($# -ne 1) || ! $SUDO_USER ]] && echo 'Usage: sudo ./setup passwd' && exit 1
+
 
 wget ${gourl}
 
