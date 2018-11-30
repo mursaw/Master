@@ -62,10 +62,8 @@ echo "- NKN update script installed"
 chown -R "$user:$user" "$HOME/go/src/github.com/nknorg/nkn"
 chown -R "$user:$user" "$HOME/go"
 
-cd Master
-
 chown "$user:$user" "~"
-read
+
 
 # Useful aliases and cleaning
 
