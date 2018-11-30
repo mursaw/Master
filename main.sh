@@ -58,8 +58,6 @@ sed -i "s/EDITNAME/$user/g" nknupdate
 mv nknupdate "~"
 echo "- NKN update script installed"
 
-cd ..
-
 # Make sure no files are owned by root
 chown -R "$user:$user" "$HOME/go/src/github.com/nknorg/nkn"
 chown -R "$user:$user" "$HOME/go"
